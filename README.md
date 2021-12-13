@@ -33,10 +33,10 @@ The MechaCar_mpg.csv dataset contains mpg test results for 50 prototype MechaCar
 Linear Regression Model:
 - mpg = (6.267)vehicle_length + (0.0012)vehicle_weight + (0.688)spoiler_angle + (3.546)ground_clearance + (-3.411)AWD + (-104.0)
 
-ADD SCREENSHOT
+![Alt Text](https://github.com/syoder821/MechaCar_Statistical_Analysis/blob/main/Resources/Images/Del_1_Linear_Regression.png)
 Statistical Analysis Summary:
 - The linear model's r-squared value of 0.7149 indicates the model does a good job in predicting MPG of the MechaCar prototypes 
-- The p-Value (5.35e-11) for the model is much smaller the assumed significance level of 0.05% indicating that evidence supports rejecting the null hypothesis.  
+- The p-Value (5.35e-11) for the model is much smaller than the assumed significance level of 0.05% indicating that evidence supports rejecting the null hypothesis.  
 - Vehicle length and vechicle ground clearance have significant influence on mpg on the MechaCar prototype while vehicle weight, spoiler angle and AWD have minimal impact. 
 
 # Deliverable 2: Summary Statistics on Suspension Coils
@@ -46,8 +46,8 @@ The MechaCar Suspension_Coil.csv dataset contains the results from multiple prod
 - The following PSI metrics for each lot: mean, median, variance, and standard deviation.
 
 ## Results
-ADD SCREENSHOTS
-
+![Alt Text](https://github.com/syoder821/MechaCar_Statistical_Analysis/blob/main/Resources/Images/Del_2_Suspension_DF.png)
+![Alt Text](https://github.com/syoder821/MechaCar_Statistical_Analysis/blob/main/Resources/Images/Del_2_Suspension_coils.png)
 The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. 
 The variance of the suspension coils when all lots are analyzied together is 62.29 and is well within the 100 PSI variance specification.  When looking at the lots individually, Lot 1 and Lot 2 are within the 100 PSI variance specification; with variances of 0.98 and 7.47 respectively.  Lot 3 is out of family with a PSI variance of 170.29 which exceeds the 100 PSI specification.  It is noted that the variance for all Lots combined is driven by Lot 3. 
 
@@ -56,12 +56,12 @@ The variance of the suspension coils when all lots are analyzied together is 62.
 R scripts are used to perform t-tests to determine if all manufacturing lots and each lot indiviually are statistically different from the population mean of 1,500 pounds per square inch.
 
 ## Results
-All manufacturing lots t-test results:
-- ADD Screenshots
+### All manufacturing lots t-test results:
+![Alt Text](https://github.com/syoder821/MechaCar_Statistical_Analysis/blob/main/Resources/Images/Del_3_ttest_all_lots.png)
 - The mean of all three lots is 1498.78 with a p-Value of 0.06 which is higher than the common significance level of 0.05.  Based on this there is not enough evidence to support refecting the null hypothesis.  The mean of these three manufacturing lots is statistically similiar to the population mean of 1500.
 
-- Add screenshots
-Individual lot t-test results:
+### Individual lot t-test results:
+![Alt Text](https://github.com/syoder821/MechaCar_Statistical_Analysis/blob/main/Resources/Images/Del_3_ttest_ind_lots.png)
 - Lot 1 has a sample mean of 1500 and a p-Value of 1 therefore the null hypothesis that there is no statistical differnce between the observed mean of Lot 1 and the population mean of 1500 is accepted. 
 - Lot 2 has a similiar outcome with a sample mean of 1500.02 and a p-Value of 0.61 therefore the null hypothesis can't be rejected and the Lot 2 observed mean and the population mean are statistically similiar.
 - Lot 3 has a sample mean of 1496.14 and a p-Value of 0.04.  Based on the p-Value of 0.04 being less than the common significance level of 0.05 the null hypothesis that the sample mean and the population mean are not statistically different is rejected.  
