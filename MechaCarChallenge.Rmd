@@ -1,0 +1,59 @@
+---
+title: "MechaCarChallenge R notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+
+```{r}
+library(dplyr)
+```
+
+
+```{r}
+MechaCar_mpg <- read.csv('Resources/MechaCar_mpg.csv',stringsAsFactors = F) #read in dataset
+head(MechaCar_mpg)
+```
+
+```{r}
+#generate multiple linear regression model
+lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD,data=MechaCar_mpg)
+summary(lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD,data=MechaCar_mpg))
+```
+```{r}
+Suspension_Coil <- read.csv('Resources/Suspension_Coil.csv',stringsAsFactors = F) #read in dataset
+head(Suspension_Coil)
+```
+```{r}
+summarize(Suspension_Coil, PSI_mean=mean(PSI), PSI_median=median(PSI), PSI_variance=var(PSI), PSI_SD=sd(PSI))
+```
+```{r}
+by_lot_num <- Suspension_Coil %>% group_by(Manufacturing_Lot)
+```
+
+```{r}
+summarize(Suspension_Coil %>% group_by(Manufacturing_Lot), PSI_mean=mean(PSI), PSI_median=median(PSI), PSI_variance=var(PSI), PSI_SD=sd(PSI))
+
+```
+```{r}
+#library(gtsummary)
+```
+
+```{r}
+t.test(Suspension_Coil$PSI,mu=1500)
+```
+```{r}
+lot1 <- subset(Suspension_Coil, Manufacturing_Lot == "Lot1") 
+t.test(lot1$PSI ,mu=1500)
+```
+```{r}
+lot2 <- subset(Suspension_Coil, Manufacturing_Lot == "Lot2") 
+t.test(lot2$PSI ,mu=1500)
+```
+```{r}
+lot3 <- subset(Suspension_Coil, Manufacturing_Lot == "Lot3") 
+t.test(lot3$PSI ,mu=1500)
+```
+
