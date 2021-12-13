@@ -69,7 +69,7 @@ R scripts are used to perform t-tests to determine if all manufacturing lots and
 # Deliverable 4: Study Designed to Compare the MechaCar Vehicles Performance versus Competition 
 The goal of the study is to determine if the fuel efficiency, price, safety rating, and horsepower for the MechaCar out performs the competition.  These parameters are believed to be important buying criteria for customers.   A statistitcal analysis of these four parameters will be performed to determine how well the MechCar compares versus the competition. The results can be used to focus and support marketing material for the MechaCar on the advantages discovered. 
 
-The vehicle class for comparison is the Sedan.  The metrics of fuel efficiency, price, safety rating, and horsepower is collected for latest competitors models and compared versus the MechaChar data. Metrics:
+The vehicle class for comparison is the Sedan.  The metrics of fuel efficiency, price, safety rating, and horsepower are collected for latest competitors models and compared versus the MechaChar data. Metrics:
 1. Fuel Efficiency 
 2. Price
 3. Safety Rating
@@ -82,6 +82,6 @@ The significance value for the study is defined to be 0.05.
 For the intial analysis all the competitor data is grouped together to determine how well the MechaCar compares to the overall market.  
 - T-tests are performed on each metric for the MechaCar vs. the same metric from the competitor data.  If the p-Value is less than 0.05 then the NULL hypothesis will be rejected for that metric and the metric evaluted to determine if the MechaCar out performs or underperforms the competition.  
 
-Additional analysis of selected individual key competitor data is generated to determine how well the MechaCar compares to the specific competitors in the market.  
-- T-tests are performed on each metric for the MechaCar vs. the same metric each individual competitor's data.  If the p-Value is less than 0.05 then the NULL hypothesis will be rejected for that metric and the metric evaluted to determine if the MechaCar out performs or underperforms the specific individual competitors.
+Additional analysis of selected individual key competitor data is generated to determine how well the MechaCar compares to the specific major competitors in the market.  
+- T-tests are performed on each metric for the MechaCar vs. the same metric for each individual competitor's data.  If the p-Value is less than 0.05 then the NULL hypothesis will be rejected for that metric and the metric evaluted to determine if the MechaCar out performs or underperforms the specific individual competitors.
 
